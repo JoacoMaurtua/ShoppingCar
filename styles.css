@@ -6,7 +6,7 @@
 }
 
 header{
-  background-image: url('images/cover.PNG');
+  background-image: url('images/cover.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -80,10 +80,34 @@ header{
 
   .container img{ 
     height: 23.438rem;
+  }
+
+  .product{
     margin-left: 20px;
     margin-right: 50px;
     position: relative;
     overflow: hidden;
     border: 2px solid black;
   }
+
+  .add-cart{
+    position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .product:hover .cart1,
+  .product:hover .cart2,
+  .product:hover .cart3,
+  .product:hover .cart4{
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+  }
+
 
