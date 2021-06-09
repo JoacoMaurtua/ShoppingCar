@@ -5,6 +5,15 @@
   font-family: 'Roboto',sans-serif;
 }
 
+/*************NAV SECTION************/
+
+h2{font-size: 2.5rem;}
+  
+ul{ margin-top: 0.9rem;}
+ 
+
+
+
 header{
   background-image: url('images/cover.jpg');
   background-repeat: no-repeat;
@@ -46,8 +55,10 @@ header{
     display: inline-block;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
+    font-weight: bold;
   }
 
+  
   nav li span{ padding-left: 0.313rem;}
     
 
@@ -55,6 +66,13 @@ header{
     padding: 0.313rem;
     background-color: #fff;
     text-decoration: none;
+    padding: 0.625rem 0.938rem;
+    border-radius: 0.938rem;
+  }
+
+  li a:hover{
+    background: linear-gradient(rgb(56, 99, 226),rgb(84, 117, 216),rgb(98, 128, 218));
+    color: white;
   }
 
   .cart i{
@@ -64,18 +82,24 @@ header{
   }
 
   .cart a{
-    background-color: royalblue;
+    background-color: rgb(35, 197, 62);
     color: white;
     cursor: pointer;
     text-decoration: none;
   }
 
+  .cart a:hover{
+    background: linear-gradient(rgb(96, 184, 96),green,green)
+  }
+
+  /*************MAIN SECTION************/
+
   .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    padding-bottom: 100px;
+    margin-top: 3.125rem;
+    padding-bottom: 6.25rem;
   }
 
   .container img{ 
@@ -83,8 +107,8 @@ header{
   }
 
   .product{
-    margin-left: 20px;
-    margin-right: 50px;
+    margin-left: 1.25rem;
+    margin-right: 3.125rem;
     position: relative;
     overflow: hidden;
     border: 2px solid black;
@@ -104,9 +128,9 @@ header{
   .product:hover .cart2,
   .product:hover .cart3,
   .product:hover .cart4{
-    bottom: 50px;
+    bottom: 3.125rem;
     opacity: 1;
-    padding: 10px;
+    padding: 0.625rem;
     text-decoration: none;
   }
 
