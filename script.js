@@ -28,7 +28,7 @@ let products = [
 
 for(let i = 0; i<carts.length; i++){
   carts[i].addEventListener('click',()=>{
-    cartNumbers();
+    cartNumbers(products[i]);
   });
 }
 
@@ -39,7 +39,7 @@ const onLoadCartNumbers = () =>{ //mnatiene el contador de los productos al refr
   }
 }
 
-const cartNumbers = () =>{
+const cartNumbers = (product) =>{
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers); //converir de cadena a numero
     if(productNumbers){
@@ -50,6 +50,35 @@ const cartNumbers = () =>{
       localStorage.setItem('cartNumbers',1);
       document.querySelector('.cart span').textContent = 1;
     }
+
+    setItems(product);
+
+}
+
+const setItems = (product) =>{
+  let cartItems = localStorage.getItem('productsInCart');
+  cartItems = JSON.parse(cartItems)
+  console.log("My cartItems are", cartItems);
+
+  if(cartItems != null){
+    
+    if(cartItems[product.tag] == undefined){
+      cartItems = {
+        ...cartItems, //agarrar cualquier elemento de cartItems
+        [product.tag]:product
+      }
+    }
+    cartItems[product.tag].inCart += 1;
+  }else{
+    product.inCart = 1; //si ya esta en el carrito
+    cartItems = {
+      [product.tag]:product
+    }
+
+  }
+
+ 
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems)); //pasar los objetos en formato json
 
 }
 
