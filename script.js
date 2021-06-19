@@ -29,6 +29,7 @@ let products = [
 for(let i = 0; i<carts.length; i++){
   carts[i].addEventListener('click',()=>{
     cartNumbers(products[i]);
+    totalCost(products[i]);
   });
 }
 
@@ -84,3 +85,14 @@ const setItems = (product) =>{
 
 onLoadCartNumbers();
 
+//Calcular el costo total de los productos del carrito
+const totalCost = product =>{
+  let cartCost = localStorage.getItem('totalCost');
+  if(cartCost != null){
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost",cartCost + product.price);
+  }else{
+    localStorage.setItem("totalCost",product.price);
+  }
+
+}
