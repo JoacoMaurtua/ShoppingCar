@@ -5,6 +5,8 @@
   font-family: 'Roboto',sans-serif;
 }
 
+/* BEGIN THE INDEX SECTION*/
+
 /*************NAV SECTION************/
 
 h2{font-size: 2.5rem;}
@@ -94,7 +96,8 @@ header{
 
   /*************MAIN SECTION************/
 
-  .container{
+  .container,
+  .product-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -151,6 +154,51 @@ header{
     padding: 0.625rem;
     text-decoration: none;
   }
+
+  /* END THE INDEX SECTION*/
+
+
+  /* BEGIN THE CART SECTION*/
+
+.product-container{
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgrey;
+  margin: 0 auto;
+}
+
+.product-title{width: 45%;}
+
+.price{
+  width: 15%;
+
+  display: flex;
+  align-items: center;
+}
+
+.quantity{
+  width: 30%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.total{
+  width: 10%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
 
   
     
