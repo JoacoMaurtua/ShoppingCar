@@ -83,7 +83,6 @@ const setItems = (product) =>{
 
 }
 
-onLoadCartNumbers();
 
 //Calcular el costo total de los productos del carrito
 const totalCost = product =>{
@@ -96,3 +95,27 @@ const totalCost = product =>{
   }
 
 }
+
+//FUNCION PARA COMPROBAR SI HAY ALGO EN EL LOCAL STORAGE
+
+function displayCart(){
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector(".product-container");
+  if(cartItems && productContainer){
+     productContainer.innerHTML = '';
+      Object.values(cartItems).map(item=>{
+          productContainer.innerHTML += `
+            <div class="product">
+              <i class="fas fa-times-circle"></i>
+              <img src="./images/${item.tag}.PNG">
+              <span>${item.name}</span>
+            </div>
+          `
+      }); 
+  }
+}
+
+onLoadCartNumbers();
+displayCart();
+

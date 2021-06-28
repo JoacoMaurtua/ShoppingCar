@@ -180,7 +180,6 @@ header{
 
 .price{
   width: 15%;
-
   display: flex;
   align-items: center;
 }
@@ -198,6 +197,14 @@ header{
   display: flex;
   align-items: center;
 }
+
+/* .product{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid green;
+}    */
 
 
   
